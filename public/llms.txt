@@ -1,0 +1,28 @@
+# CallAudit.co
+
+> CallAudit.co is an AI-native call auditing platform that analyzes call transcripts for quality, compliance, outcomes, sentiment, coaching opportunities, churn risk, and revenue signals.
+
+## Primary capabilities
+
+- Bulk upload existing call transcripts without waiting for API integration.
+- Connect a call platform for continuous transcript analysis.
+- Score calls against custom quality and compliance criteria.
+- Link every score, flag, and insight to supporting transcript evidence.
+- Detect buying signals, churn risk, coaching gaps, and customer outcomes.
+
+## Website sections
+
+- Home: https://callaudit.co/#top
+- Problem: https://callaudit.co/#problem
+- Solution: https://callaudit.co/#solution
+- Intelligence: https://callaudit.co/#intelligence
+- Results: https://callaudit.co/#results
+- Who It Is For: https://callaudit.co/#who
+- Industries: https://callaudit.co/#industries
+- Use Cases: https://callaudit.co/#use-cases
+- Contact: https://callaudit.co/#contact
+
+## Contact
+
+- Website: https://callaudit.co/
+- Email: hello@callaudit.co

@@ -6,6 +6,7 @@ import Intelligence from '@/sections/Intelligence'
 import Difference from '@/sections/Difference'
 import Metrics from '@/sections/Metrics'
 import Audiences from '@/sections/Audiences'
+import MarketFit from '@/sections/MarketFit'
 import CTA from '@/sections/CTA'
 import Footer from '@/sections/Footer'
 import { LeadFormModal } from '@/components/lead-form'
@@ -22,6 +23,7 @@ export default function Home() {
         <Difference />
         <Metrics />
         <Audiences />
+        <MarketFit />
         <CTA />
       </main>
       <Footer />

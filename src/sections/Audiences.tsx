@@ -31,7 +31,7 @@ const AUDIENCES = [
 export default function Audiences() {
   return (
     <section id="who" className="relative scroll-mt-24 border-t border-white/[0.05]">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="max-w-2xl">
           <Reveal>
             <Eyebrow>Who It's For</Eyebrow>
@@ -44,7 +44,7 @@ export default function Audiences() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
           {AUDIENCES.map((a, i) => (
             <Reveal key={a.title} delay={0.08 + i * 0.07}>
               <div className="group relative h-full overflow-hidden rounded-2xl card-line bg-ink-50/70 p-7 transition hover:border-mint-400/25 hover:bg-ink-50 sm:p-8">

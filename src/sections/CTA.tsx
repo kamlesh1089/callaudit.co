@@ -5,11 +5,11 @@ import { LeadFormButton } from '@/components/lead-form'
 
 export default function CTA() {
   return (
-    <section id="cta" className="relative scroll-mt-24 overflow-hidden border-t border-white/[0.05]">
+    <section id="contact" className="relative scroll-mt-24 overflow-hidden border-t border-white/[0.05]">
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-60 mask-fade-b" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[380px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-mint-500/[0.12] blur-[130px]" />
 
-      <div className="relative mx-auto max-w-4xl px-5 py-28 text-center sm:px-8 lg:py-36">
+      <div className="relative mx-auto max-w-4xl px-5 py-20 text-center sm:px-8 lg:py-24">
         <Reveal>
           <div className="mx-auto flex w-fit items-center justify-center">
             <Waveform className="h-8 w-52" barClassName="bg-mint-400/80" />

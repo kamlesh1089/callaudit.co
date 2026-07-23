@@ -4,7 +4,7 @@ const COLS = [
   {
     title: 'Product',
     links: ['Intelligence Layers', 'How It Works', 'Results', 'Pricing'],
-    hrefs: ['#intelligence', '#how', '#results', '#cta'],
+    hrefs: ['#intelligence', '#solution', '#results', '#contact'],
   },
   {
     title: 'Teams',
@@ -28,7 +28,7 @@ export default function Footer() {
               Connect · Analyze · Score · Act
             </p>
           </div>
-          <div className="flex flex-wrap gap-10 sm:gap-16">
+          <div className="flex flex-wrap gap-10 sm:gap-12">
             {COLS.map((c) => (
               <div key={c.title}>
                 <h4 className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">

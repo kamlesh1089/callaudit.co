@@ -190,7 +190,7 @@ export default function Intelligence() {
   return (
     <section id="intelligence" className="relative scroll-mt-24 overflow-hidden">
       <div className="pointer-events-none absolute left-[-240px] top-1/4 h-[480px] w-[480px] rounded-full bg-mint-500/[0.06] blur-[130px]" />
-      <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="max-w-2xl">
           <Reveal>
             <Eyebrow>Three Intelligence Layers</Eyebrow>
@@ -212,7 +212,7 @@ export default function Intelligence() {
         </div>
 
         <Reveal delay={0.2}>
-          <div className="mt-14 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="mt-10 grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
             {/* selector */}
             <div className="space-y-3">
               {LAYERS.map((l) => {

@@ -32,7 +32,7 @@ const ROWS = [
 export default function Difference() {
   return (
     <section className="relative border-y border-white/[0.05] bg-ink-50/40">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <Eyebrow>The Difference</Eyebrow>
@@ -54,7 +54,7 @@ export default function Difference() {
         </div>
 
         <Reveal delay={0.2}>
-          <div className="mx-auto mt-14 max-w-4xl overflow-x-auto rounded-2xl card-line bg-ink-50/80">
+          <div className="mx-auto mt-10 max-w-4xl overflow-x-auto rounded-2xl card-line bg-ink-50/80">
             <div className="min-w-[680px]">
             {/* header row */}
             <div className="grid grid-cols-[0.7fr_1fr_1fr] border-b border-white/[0.07] max-sm:grid-cols-[0.55fr_1fr_1fr]">

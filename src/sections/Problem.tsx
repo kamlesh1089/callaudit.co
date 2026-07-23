@@ -114,17 +114,18 @@ function CoverageGrid() {
 export default function Problem() {
   return (
     <section id="problem" className="relative scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
-        <div className="grid items-start gap-14 lg:grid-cols-2">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+        <div className="grid items-start gap-10 lg:grid-cols-2">
           <div>
             <Reveal>
               <Eyebrow>The 95% Visibility Gap</Eyebrow>
             </Reveal>
             <Reveal delay={0.08}>
-              <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl">
-                QA sampling covers about 5%.
-                <br />
-                <span className="font-serif font-normal italic text-slate-400">
+              <h2 className="mt-6 font-display font-semibold leading-[1.08] tracking-tight text-white">
+                <span className="block whitespace-nowrap text-[clamp(1.35rem,6vw,3rem)]">
+                  QA sampling covers about 5%.
+                </span>
+                <span className="mt-2 block font-serif text-[clamp(1.75rem,7vw,3rem)] font-normal italic text-slate-400">
                   The remaining 95% is a black box.
                 </span>
               </h2>

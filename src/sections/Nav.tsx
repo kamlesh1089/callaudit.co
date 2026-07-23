@@ -3,11 +3,15 @@ import { ArrowRight, Menu, X } from 'lucide-react'
 import { LeadFormButton } from '@/components/lead-form'
 
 const LINKS = [
-  { label: 'The Problem', href: '#problem' },
-  { label: 'How It Works', href: '#how' },
+  { label: 'Home', href: '#top' },
+  { label: 'Problem', href: '#problem' },
+  { label: 'Solution', href: '#solution' },
   { label: 'Intelligence', href: '#intelligence' },
   { label: 'Results', href: '#results' },
   { label: "Who It's For", href: '#who' },
+  { label: 'Industries', href: '#industries' },
+  { label: 'Use Cases', href: '#use-cases' },
+  { label: 'Contact Us', href: '#contact' },
 ]
 
 export function Logo({ compact = false }: { compact?: boolean }) {
@@ -49,18 +53,18 @@ export default function Nav() {
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-5 sm:px-8">
         <Logo />
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-4 xl:flex 2xl:gap-5">
           {LINKS.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-[16px] font-medium text-[#A6B3C4] transition hover:text-white"
+              className="whitespace-nowrap text-[12.5px] font-medium text-[#A6B3C4] transition hover:text-white 2xl:text-[13.5px]"
             >
               {l.label}
             </a>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <LeadFormButton
             className="group inline-flex items-center gap-2 rounded-full bg-mint-400 px-5 py-2.5 text-[13.5px] font-semibold text-ink transition hover:bg-mint-300 hover:glow-mint"
           >
@@ -69,7 +73,7 @@ export default function Nav() {
           </LeadFormButton>
         </div>
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-300 lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-300 xl:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -77,8 +81,8 @@ export default function Nav() {
         </button>
       </div>
       {open && (
-        <div className="glass border-b border-white/[0.06] px-5 pb-6 pt-3 lg:hidden">
-          <div className="flex flex-col gap-1">
+        <div className="glass max-h-[calc(100dvh-76px)] overflow-y-auto border-b border-white/[0.06] px-5 pb-6 pt-3 xl:hidden">
+          <div className="grid grid-cols-2 gap-1 sm:grid-cols-3">
             {LINKS.map((l) => (
               <a
                 key={l.href}
@@ -91,7 +95,7 @@ export default function Nav() {
             ))}
             <LeadFormButton
               onOpen={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-mint-400 px-5 py-3 text-sm font-semibold text-ink"
+              className="col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-mint-400 px-5 py-3 text-sm font-semibold text-ink sm:col-span-3"
             >
               Start Free Audit <ArrowRight className="h-4 w-4" />
             </LeadFormButton>

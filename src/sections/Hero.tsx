@@ -135,7 +135,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute right-[-200px] top-1/3 h-[420px] w-[420px] rounded-full bg-emerald-600/[0.07] blur-[120px]" />
 
       <div className="relative mx-auto max-w-[1280px] px-5 pb-28 pt-28 sm:px-8 sm:pb-36 sm:pt-36 lg:pb-44 lg:pt-48">
-        <div className="grid items-center gap-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20 xl:gap-28">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16 xl:gap-20">
           {/* copy */}
           <div>
             <motion.div {...fade(0)}>
@@ -167,7 +167,7 @@ export default function Hero() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </LeadFormButton>
               <a
-                href="#how"
+                href="#solution"
                 className="inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-full px-8 text-[16px] font-medium text-slate-200 ring-1 ring-white/10 transition duration-300 hover:bg-white/[0.035] hover:ring-white/20 sm:h-16 sm:w-auto"
               >
                 See how it works
