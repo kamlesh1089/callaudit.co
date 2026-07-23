@@ -1,15 +1,16 @@
 import { Logo } from './Nav'
+import { LeadFormButton } from '@/components/lead-form'
 
 const COLS = [
   {
     title: 'Product',
     links: ['Intelligence Layers', 'How It Works', 'Results', 'Pricing'],
-    hrefs: ['#intelligence', '#solution', '#results', '#contact'],
+    hrefs: ['/#intelligence', '/#solution', '/#results', '/pricing'],
   },
   {
     title: 'Teams',
     links: ['Sales', 'Support & CX', 'QA & Compliance', 'BPOs'],
-    hrefs: ['#who', '#who', '#who', '#who'],
+    hrefs: ['/#who', '/#who', '/#who', '/#who'],
   },
 ]
 
@@ -48,6 +49,14 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
+            <div>
+              <h4 className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">Contact Us</h4>
+              <div className="mt-4 space-y-2.5">
+                <LeadFormButton className="block text-left text-[13.5px] text-slate-400 transition hover:text-mint-300">Start a conversation</LeadFormButton>
+                <a href="mailto:hello@callaudit.co" className="block text-[13.5px] text-slate-400 transition hover:text-mint-300">hello@callaudit.co</a>
+                <a href="https://wa.me/919004271098" target="_blank" rel="noreferrer" className="block text-[13.5px] text-slate-400 transition hover:text-mint-300">WhatsApp +91 9004271098</a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/[0.06] pt-7 sm:flex-row">

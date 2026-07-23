@@ -102,6 +102,17 @@ export function LeadFormModal() {
             <p className="mx-auto mt-3 max-w-sm text-sm leading-6 text-slate-400">
               We’ll review your details and contact you shortly about your free call audit.
             </p>
+            <p className="mx-auto mt-5 max-w-sm text-sm leading-6 text-slate-300">
+              Contact or WhatsApp us on{' '}
+              <a
+                href="https://wa.me/919004271098"
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-mint-400 transition hover:text-mint-300"
+              >
+                +91 9004271098
+              </a>
+            </p>
             <button
               type="button"
               onClick={close}
@@ -133,7 +144,7 @@ export function LeadFormModal() {
               <input
                 type="hidden"
                 name="_next"
-                value={`${window.location.origin}/?submitted=true`}
+                value={`${window.location.origin}${window.location.pathname}?submitted=true`}
               />
 
               <label className="block">

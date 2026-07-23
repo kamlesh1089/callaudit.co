@@ -3,20 +3,19 @@ import { ArrowRight, Menu, X } from 'lucide-react'
 import { LeadFormButton } from '@/components/lead-form'
 
 const LINKS = [
-  { label: 'Home', href: '#top' },
-  { label: 'Problem', href: '#problem' },
-  { label: 'Solution', href: '#solution' },
-  { label: 'Intelligence', href: '#intelligence' },
-  { label: 'Results', href: '#results' },
-  { label: "Who It's For", href: '#who' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'Use Cases', href: '#use-cases' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/#top' },
+  { label: 'Problem', href: '/#problem' },
+  { label: 'Solution', href: '/#solution' },
+  { label: 'Intelligence', href: '/#intelligence' },
+  { label: 'Results', href: '/#results' },
+  { label: "Who It's For", href: '/#who' },
+  { label: 'Industries', href: '/#industries' },
+  { label: 'Use Cases', href: '/#use-cases' },
 ]
 
 export function Logo({ compact = false }: { compact?: boolean }) {
   return (
-    <a href="#top" className="group flex items-center gap-2.5">
+    <a href="/#top" className="group flex items-center gap-2.5">
       <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-mint-500/15 ring-1 ring-mint-400/30 transition group-hover:bg-mint-500/25">
         <span className="flex items-center gap-[2.5px]">
           <span className="h-2.5 w-[2.5px] rounded-full bg-mint-400" />
@@ -58,11 +57,17 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="whitespace-nowrap text-[12.5px] font-medium text-[#A6B3C4] transition hover:text-white 2xl:text-[13.5px]"
+              className="whitespace-nowrap text-[14px] font-medium text-[#A6B3C4] transition hover:text-white 2xl:text-[14.5px]"
             >
               {l.label}
             </a>
           ))}
+          <a href="/pricing" className="whitespace-nowrap text-[14px] font-medium text-[#A6B3C4] transition hover:text-white 2xl:text-[14.5px]">
+            Pricing
+          </a>
+          <LeadFormButton className="whitespace-nowrap text-[14px] font-medium text-[#A6B3C4] transition hover:text-white 2xl:text-[14.5px]">
+            Contact Us
+          </LeadFormButton>
         </nav>
         <div className="hidden items-center gap-3 xl:flex">
           <LeadFormButton
@@ -93,6 +98,12 @@ export default function Nav() {
                 {l.label}
               </a>
             ))}
+            <a href="/pricing" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white">
+              Pricing
+            </a>
+            <LeadFormButton onOpen={() => setOpen(false)} className="rounded-lg px-3 py-2.5 text-left text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white">
+              Contact Us
+            </LeadFormButton>
             <LeadFormButton
               onOpen={() => setOpen(false)}
               className="col-span-2 mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-mint-400 px-5 py-3 text-sm font-semibold text-ink sm:col-span-3"
