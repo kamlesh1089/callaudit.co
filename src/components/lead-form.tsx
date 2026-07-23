@@ -26,15 +26,15 @@ export function EmbeddedLeadForm() {
   }
 
   return (
-    <form action="https://formsubmit.co/hello@callaudit.co" method="POST" className="rounded-[28px] border border-white/10 bg-ink-50/90 p-6 shadow-2xl sm:p-8">
+    <form action="https://formsubmit.co/hello@callaudit.co" method="POST">
       <input type="hidden" name="_subject" value="New CallAudit.co enquiry" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_next" value={`${window.location.origin}/?submitted=true#contact`} />
-      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mint-400">Start your free audit</p>
-      <h3 className="mt-3 font-display text-3xl font-semibold text-white">Plan your first transcript audit.</h3>
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mint-400">Request a free audit</p>
+      <h3 className="mt-3 font-display text-3xl font-semibold text-white">See what your calls reveal.</h3>
       <p className="mt-3 text-sm font-medium leading-6 text-slate-400">Share your details and we’ll help you get started with conversations you already have.</p>
-      <div className="mt-6 space-y-4">
+      <div className="mt-7 space-y-4">
         <label className="block">
           <span className="mb-2 block text-sm font-medium text-slate-200">Name</span>
           <input name="name" type="text" autoComplete="name" required className="h-12 w-full rounded-xl border border-white/10 bg-ink px-4 text-base font-medium text-white outline-none transition placeholder:text-slate-600 focus:border-mint-400 focus:ring-2 focus:ring-mint-400/15" placeholder="Your full name" />
