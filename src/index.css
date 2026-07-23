@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 204 52% 4%;
+    --foreground: 220 16% 97%;
+    --card: 213 42% 9%;
+    --card-foreground: 210 20% 96%;
+    --popover: 222 40% 5%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 161 66% 53%;
+    --primary-foreground: 222 47% 4%;
+    --secondary: 220 25% 10%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 220 25% 10%;
+    --muted-foreground: 217 12% 62%;
+    --accent: 220 25% 12%;
+    --accent-foreground: 210 20% 96%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 22% 18%;
+    --input: 220 20% 16%;
+    --ring: 160 84% 39%;
+    --radius: 0.75rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    background:
+      radial-gradient(circle at 74% 8%, rgba(54, 216, 167, 0.07), transparent 28rem),
+      #050B10;
+  }
+
+  ::selection {
+    background: rgba(54, 216, 167, 0.24);
+    color: #F6F7F9;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050B10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1b2436;
+    border-radius: 8px;
+    border: 2px solid #050B10;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a3852;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(22, 35, 44, 0.52) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(22, 35, 44, 0.52) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .glass {
+    background: rgba(8, 17, 22, 0.72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .text-gradient {
+    background: linear-gradient(120deg, #44E3B3 0%, #36D8A7 55%, #22C48F 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glow-mint {
+    box-shadow: 0 0 22px rgba(54, 216, 167, 0.2), 0 0 64px rgba(54, 216, 167, 0.07);
+  }
+
+  .card-line {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent);
+    mask-image: linear-gradient(to bottom, black 55%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
