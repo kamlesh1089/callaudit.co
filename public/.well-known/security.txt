@@ -1,0 +1,4 @@
+Contact: mailto:hello@callaudit.co
+Canonical: https://callaudit.co/.well-known/security.txt
+Preferred-Languages: en
+Expires: 2027-07-23T23:59:59Z

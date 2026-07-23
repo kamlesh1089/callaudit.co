@@ -7,32 +7,25 @@ const jsFile = assetFiles.find((file) => file.endsWith('.js'))
 
 if (!cssFile || !jsFile) throw new Error('Missing production CSS or JavaScript asset')
 
-const [baseHtml, css, js] = await Promise.all([
+const [baseHtml, basePricingHtml, css, js] = await Promise.all([
   readFile('dist/index.html', 'utf8'),
+  readFile('dist/pricing/index.html', 'utf8'),
   readFile(`dist/assets/${cssFile}`, 'utf8'),
   readFile(`dist/assets/${jsFile}`, 'utf8'),
 ])
 
-const html = baseHtml
+const inlineAssets = (source) => source
   .replace(
-    /<script type="module" crossorigin src="\.\/assets\/[^\"]+"><\/script>/,
+    /<script type="module" crossorigin src="(?:\.\.\/|\.\/)assets\/[^\"]+"><\/script>/,
     () => `<script type="module">${js.replace(/<\/script/gi, '<\\/script')}</script>`,
   )
   .replace(
-    /<link rel="stylesheet" crossorigin href="\.\/assets\/[^\"]+">/,
+    /<link rel="stylesheet" crossorigin href="(?:\.\.\/|\.\/)assets\/[^\"]+">/,
     () => `<style>${css}</style>`,
   )
 
-const pricingTitle = 'CallAudit.co Pricing | 100 Minutes Free or High-Volume Analysis'
-const pricingDescription =
-  'Audit your first 100 call minutes free, or contact CallAudit.co for high-volume transcript auditing and live call analysis.'
-const pricingHtml = html
-  .replace(/<title>[^<]*<\/title>/, `<title>${pricingTitle}</title>`)
-  .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${pricingDescription}" />`)
-  .replace(/<link rel="canonical" href="[^"]*" \/>/, '<link rel="canonical" href="https://callaudit.co/pricing" />')
-  .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${pricingTitle}" />`)
-  .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${pricingDescription}" />`)
-  .replace(/<meta property="og:url" content="[^"]*" \/>/, '<meta property="og:url" content="https://callaudit.co/pricing" />')
+const html = inlineAssets(baseHtml)
+const pricingHtml = inlineAssets(basePricingHtml)
 
 await writeFile(
   'dist/server/index.js',
@@ -42,8 +35,8 @@ const pricingHtml = ${JSON.stringify(pricingHtml)}
 export default {
   async fetch(request, env) {
     const url = new URL(request.url)
-    if (url.pathname === '/' || !url.pathname.includes('.')) {
-      return new Response(url.pathname === '/pricing' ? pricingHtml : html, {
+    if (url.pathname === '/' || url.pathname === '/pricing' || url.pathname === '/pricing/') {
+      return new Response(url.pathname.startsWith('/pricing') ? pricingHtml : html, {
         headers: { 'content-type': 'text/html; charset=UTF-8' },
       })
     }

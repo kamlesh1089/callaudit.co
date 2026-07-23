@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="CallAudit.co analyzes call transcripts for quality, compliance, outcomes, sentiment, and revenue signals. Bulk upload existing transcripts or connect your platform for continuous analysis." />
+    <meta name="author" content="CallAudit.co" />
+    <meta name="application-name" content="CallAudit.co" />
+    <meta name="format-detection" content="telephone=no" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#050B10" />
     <link rel="canonical" href="https://callaudit.co/" />
@@ -14,11 +17,16 @@
     <meta property="og:url" content="https://callaudit.co/" />
     <meta property="og:site_name" content="CallAudit.co" />
     <meta property="og:image" content="https://callaudit.co/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="CallAudit.co — Every call audited. Every signal surfaced." />
+    <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="CallAudit.co — Every call audited. Every signal surfaced." />
     <meta name="twitter:description" content="Upload existing transcripts or connect your call platform for AI-native quality, compliance, and revenue analysis." />
     <meta name="twitter:image" content="https://callaudit.co/og.png" />
+    <meta name="twitter:image:alt" content="CallAudit.co — Every call audited. Every signal surfaced." />
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2304060C'/%3E%3Crect x='6' y='12' width='3' height='8' rx='1.5' fill='%2334D399'/%3E%3Crect x='11.5' y='8' width='3' height='16' rx='1.5' fill='%2334D399'/%3E%3Crect x='17' y='11' width='3' height='10' rx='1.5' fill='%2334D399'/%3E%3Crect x='22.5' y='14' width='3' height='4' rx='1.5' fill='%2334D399'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,35 +36,60 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "@id": "https://callaudit.co/#software",
-        "name": "CallAudit.co",
-        "url": "https://callaudit.co/",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "description": "AI-native call auditing for transcript analysis, QA scoring, compliance monitoring, outcome tagging, sentiment analysis, and revenue intelligence.",
-        "featureList": [
-          "Bulk transcript upload",
-          "Call quality scoring",
-          "Compliance monitoring",
-          "Outcome and sentiment tagging",
-          "Revenue signal detection",
-          "Evidence-linked analysis"
-        ],
-        "publisher": {
-          "@type": "Organization",
-          "@id": "https://callaudit.co/#organization",
-          "name": "CallAudit.co",
-          "url": "https://callaudit.co/",
-          "email": "hello@callaudit.co",
-          "telephone": "+91-9004271098",
-          "contactPoint": {
-            "@type": "ContactPoint",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://callaudit.co/#organization",
+            "name": "CallAudit.co",
+            "url": "https://callaudit.co/",
+            "logo": "https://callaudit.co/og.png",
+            "email": "hello@callaudit.co",
             "telephone": "+91-9004271098",
-            "contactType": "sales",
-            "availableLanguage": ["English"]
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-9004271098",
+              "contactType": "sales",
+              "availableLanguage": ["English"]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://callaudit.co/#website",
+            "url": "https://callaudit.co/",
+            "name": "CallAudit.co",
+            "publisher": { "@id": "https://callaudit.co/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://callaudit.co/#webpage",
+            "url": "https://callaudit.co/",
+            "name": "CallAudit.co — AI-Native Call Auditing",
+            "description": "CallAudit.co analyzes call transcripts for quality, compliance, outcomes, sentiment, and revenue signals.",
+            "isPartOf": { "@id": "https://callaudit.co/#website" },
+            "about": { "@id": "https://callaudit.co/#software" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://callaudit.co/#software",
+            "name": "CallAudit.co",
+            "url": "https://callaudit.co/",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "Conversation intelligence and call quality assurance",
+            "operatingSystem": "Web",
+            "description": "AI-native call auditing for transcript analysis, QA scoring, compliance monitoring, outcome tagging, sentiment analysis, and revenue intelligence.",
+            "featureList": [
+              "Bulk transcript upload",
+              "Call quality scoring",
+              "Compliance monitoring",
+              "Outcome and sentiment tagging",
+              "Revenue signal detection",
+              "Evidence-linked analysis"
+            ],
+            "publisher": { "@id": "https://callaudit.co/#organization" }
           }
-        }
+        ]
       }
     </script>
     <title>CallAudit.co — AI-Native Call Auditing</title>
