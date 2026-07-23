@@ -1,4 +1,4 @@
-import { DatabaseZap, EyeOff, LockKeyhole, ShieldCheck } from 'lucide-react'
+import { DatabaseZap, EyeOff, LockKeyhole } from 'lucide-react'
 import { Eyebrow, Reveal } from '@/components/reveal'
 
 const PRINCIPLES = [
@@ -17,7 +17,7 @@ export default function Security() {
               <Eyebrow>Compliance & Data Security</Eyebrow>
               <h2 className="mt-5 font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">Security-minded from the start.</h2>
               <p className="mt-4 max-w-xl text-[15px] font-medium leading-7 text-slate-400">
-                Formal SOC 2 and HIPAA compliance are not yet in place. We are building CallAudit with strict data-handling principles and a clear path toward recognized security controls.
+                CallAudit is built around strict data-handling principles, responsible processing, and security-conscious workflows.
               </p>
             </div>
           </Reveal>
@@ -32,10 +32,6 @@ export default function Security() {
               </Reveal>
             ))}
           </div>
-        </div>
-        <div className="mt-6 flex items-center gap-2 text-xs font-medium text-slate-500">
-          <ShieldCheck className="h-4 w-4 text-mint-500" />
-          We communicate current controls transparently and do not claim certifications we have not earned.
         </div>
       </div>
     </section>
