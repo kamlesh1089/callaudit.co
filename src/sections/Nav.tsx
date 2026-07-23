@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowRight, Menu, X } from 'lucide-react'
+import { LeadFormButton } from '@/components/lead-form'
 
 const LINKS = [
   { label: 'The Problem', href: '#problem' },
@@ -60,13 +61,12 @@ export default function Nav() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href="#cta"
+          <LeadFormButton
             className="group inline-flex items-center gap-2 rounded-full bg-mint-400 px-5 py-2.5 text-[13.5px] font-semibold text-ink transition hover:bg-mint-300 hover:glow-mint"
           >
             Start Free Audit
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-          </a>
+          </LeadFormButton>
         </div>
         <button
           className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-300 lg:hidden"
@@ -89,13 +89,12 @@ export default function Nav() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="#cta"
-              onClick={() => setOpen(false)}
+            <LeadFormButton
+              onOpen={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-mint-400 px-5 py-3 text-sm font-semibold text-ink"
             >
               Start Free Audit <ArrowRight className="h-4 w-4" />
-            </a>
+            </LeadFormButton>
           </div>
         </div>
       )}

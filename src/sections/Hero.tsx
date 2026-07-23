@@ -11,6 +11,7 @@ import {
 import { Waveform } from '@/components/waveform'
 import { ScoreRing } from '@/components/score-ring'
 import { Eyebrow } from '@/components/reveal'
+import { LeadFormButton } from '@/components/lead-form'
 
 const fade = (delay: number) => ({
   initial: { opacity: 0, y: 18, filter: 'blur(8px)' },
@@ -49,7 +50,7 @@ function AuditCard() {
         </div>
 
         {/* score + tags */}
-        <div className="grid grid-cols-[auto_1fr] items-center gap-6 px-6 py-5">
+        <div className="grid items-center gap-5 px-4 py-5 sm:grid-cols-[auto_1fr] sm:gap-6 sm:px-6">
           <ScoreRing score={86} size={118} />
           <div className="space-y-2.5">
             <div className="flex items-center gap-2 rounded-lg bg-white/[0.03] px-3 py-2 ring-1 ring-white/[0.06]">
@@ -74,7 +75,7 @@ function AuditCard() {
         </div>
 
         {/* evidence */}
-        <div className="mx-6 mb-5 rounded-xl bg-ink-100/90 p-4 ring-1 ring-white/[0.06]">
+        <div className="mx-4 mb-5 rounded-xl bg-ink-100/90 p-4 ring-1 ring-white/[0.06] sm:mx-6">
           <div className="mb-2 flex items-center justify-between">
             <span className="inline-flex items-center gap-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-mint-300">
               <Link2 className="h-3 w-3" /> Buying signal · linked evidence
@@ -88,7 +89,7 @@ function AuditCard() {
             </mark>
             . Can your team handle the migration?"
           </p>
-          <div className="mt-3 flex items-center justify-between border-t border-white/[0.06] pt-3">
+          <div className="mt-3 flex flex-col gap-3 border-t border-white/[0.06] pt-3 sm:flex-row sm:items-center sm:justify-between">
             <Waveform className="h-5 w-40" animated={false} barClassName="bg-slate-600" />
             <span className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-slate-500">
               <Sparkles className="h-3 w-3 text-mint-400" />
@@ -103,7 +104,7 @@ function AuditCard() {
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.9 }}
-        className="absolute -right-4 -top-6 animate-float sm:-right-8"
+        className="absolute right-1 top-[-18px] animate-float sm:-right-8 sm:-top-6"
       >
         <div className="flex items-center gap-2 rounded-xl glass px-4 py-2.5 ring-1 ring-mint-400/30 glow-mint">
           <TrendingUp className="h-4 w-4 text-mint-300" />
@@ -114,7 +115,7 @@ function AuditCard() {
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 1.1 }}
-        className="absolute -bottom-6 -left-4 animate-float-delayed sm:-left-10"
+        className="absolute -bottom-6 left-1 animate-float-delayed sm:-left-10"
       >
         <div className="flex items-center gap-2 rounded-xl glass px-4 py-2.5 ring-1 ring-amber-400/30">
           <span className="h-2 w-2 rounded-full bg-amber-400" />
@@ -133,8 +134,8 @@ export default function Hero() {
       <div className="pointer-events-none absolute -top-40 left-1/2 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-mint-500/[0.09] blur-[140px]" />
       <div className="pointer-events-none absolute right-[-200px] top-1/3 h-[420px] w-[420px] rounded-full bg-emerald-600/[0.07] blur-[120px]" />
 
-      <div className="relative mx-auto max-w-[1280px] px-5 pb-36 pt-36 sm:px-8 lg:pb-44 lg:pt-48">
-        <div className="grid items-center gap-20 lg:grid-cols-[1.08fr_0.92fr] xl:gap-28">
+      <div className="relative mx-auto max-w-[1280px] px-5 pb-28 pt-28 sm:px-8 sm:pb-36 sm:pt-36 lg:pb-44 lg:pt-48">
+        <div className="grid items-center gap-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20 xl:gap-28">
           {/* copy */}
           <div>
             <motion.div {...fade(0)}>
@@ -142,7 +143,7 @@ export default function Hero() {
             </motion.div>
             <motion.h1
               {...fade(0.1)}
-              className="mt-8 max-w-[700px] font-display text-[52px] font-extrabold leading-[0.94] tracking-[-0.045em] text-[#F6F7F9] sm:text-[72px] lg:text-[88px]"
+              className="mt-7 max-w-[700px] font-display text-[44px] font-extrabold leading-[0.98] tracking-[-0.04em] text-[#F6F7F9] sm:mt-8 sm:text-[72px] lg:text-[88px]"
             >
               Every call audited.
               <br />
@@ -151,24 +152,23 @@ export default function Hero() {
             </motion.h1>
             <motion.p
               {...fade(0.2)}
-              className="mt-8 max-w-[650px] text-[18px] font-normal leading-[1.8] text-[#A6B3C4]"
+              className="mt-6 max-w-[650px] text-[16px] font-normal leading-[1.75] text-[#A6B3C4] sm:mt-8 sm:text-[18px]"
             >
               CallAudit deploys AI agents that analyze{' '}
               <span className="font-semibold text-white">100% of your call transcripts</span> —
               scoring quality, checking compliance, tagging outcomes, and surfacing revenue
               signals. Automatically. In under 60 seconds per call.
             </motion.p>
-            <motion.div {...fade(0.3)} className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                href="#cta"
-                className="group inline-flex h-16 items-center gap-2.5 rounded-full bg-mint-400 px-8 text-[16px] font-semibold text-ink transition duration-300 ease-[cubic-bezier(.16,1,.3,1)] hover:bg-mint-300 hover:glow-mint"
+            <motion.div {...fade(0.3)} className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+              <LeadFormButton
+                className="group inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-full bg-mint-400 px-8 text-[16px] font-semibold text-ink transition duration-300 ease-[cubic-bezier(.16,1,.3,1)] hover:bg-mint-300 hover:glow-mint sm:h-16 sm:w-auto"
               >
                 Start Free Audit
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </LeadFormButton>
               <a
                 href="#how"
-                className="inline-flex h-16 items-center gap-2.5 rounded-full px-8 text-[16px] font-medium text-slate-200 ring-1 ring-white/10 transition duration-300 hover:bg-white/[0.035] hover:ring-white/20"
+                className="inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-full px-8 text-[16px] font-medium text-slate-200 ring-1 ring-white/10 transition duration-300 hover:bg-white/[0.035] hover:ring-white/20 sm:h-16 sm:w-auto"
               >
                 See how it works
               </a>

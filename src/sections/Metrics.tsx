@@ -2,7 +2,7 @@ import { CountUp } from '@/components/count-up'
 import { Eyebrow, Reveal } from '@/components/reveal'
 
 const STATS = [
-  { prefix: '', value: 100, suffix: '%', label: 'of calls audited', note: 'vs 2–5% manual sampling' },
+  { prefix: '', value: 100, suffix: '%', label: 'of calls audited', note: 'vs about 5% QA sampling' },
   { prefix: '<', value: 60, suffix: 's', label: 'per audit', note: 'from transcript to scored call' },
   { prefix: '+', value: 23, suffix: '%', label: 'pipeline velocity', note: 'buying signals acted on faster' },
   { prefix: '−', value: 65, suffix: '%', label: 'QA cost', note: 'agents replace manual review' },
@@ -28,7 +28,7 @@ export default function Metrics() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-2xl card-line bg-white/[0.06] lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-2xl card-line bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-3">
           {STATS.map((s, i) => (
             <div key={s.label} className="bg-ink-50/95 p-7 transition hover:bg-ink-100 sm:p-9">
               <Reveal delay={i * 0.06}>

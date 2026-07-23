@@ -25,10 +25,10 @@ export default function Footer() {
               on every transcript — automatically.
             </p>
             <p className="mt-5 font-mono text-[10.5px] uppercase tracking-[0.22em] text-mint-400/70">
-              Connect · Analyze · Act
+              Connect · Analyze · Score · Act
             </p>
           </div>
-          <div className="flex gap-16">
+          <div className="flex flex-wrap gap-10 sm:gap-16">
             {COLS.map((c) => (
               <div key={c.title}>
                 <h4 className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">

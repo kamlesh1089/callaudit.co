@@ -28,11 +28,11 @@ const HIDDEN_COSTS = [
 
 function CoverageGrid() {
   const [audited, setAudited] = useState(false)
-  const lit = audited ? 100 : 2
+  const lit = audited ? 100 : 5
 
   return (
     <div className="rounded-2xl card-line bg-ink-50/80 p-6 sm:p-8">
-      <div className="mb-6 flex items-center justify-between gap-4">
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500">
             Calls audited this month
@@ -100,9 +100,9 @@ function CoverageGrid() {
             </>
           ) : (
             <>
-              <span className="font-semibold text-signal-red">98% in the dark.</span> Manual teams
-              review 2–5% of calls. The rest go completely unaudited — and that's where the cost
-              hides.
+              <span className="font-semibold text-signal-red">95% remains unseen.</span> QA sampling
+              is done on about 5% of calls. The remaining 95% goes unaudited — and that&apos;s
+              where the cost hides.
             </>
           )}
         </motion.p>
@@ -118,22 +118,21 @@ export default function Problem() {
         <div className="grid items-start gap-14 lg:grid-cols-2">
           <div>
             <Reveal>
-              <Eyebrow>The 98% Problem</Eyebrow>
+              <Eyebrow>The 95% Visibility Gap</Eyebrow>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl">
-                Your QA samples 2%.
+                QA sampling covers about 5%.
                 <br />
                 <span className="font-serif font-normal italic text-slate-400">
-                  The other 98% is a black box.
+                  The remaining 95% is a black box.
                 </span>
               </h2>
             </Reveal>
             <Reveal delay={0.16}>
               <p className="mt-6 max-w-lg text-[16px] leading-relaxed text-slate-400">
-                Most teams manually review only 2–5% of calls. Everything else goes completely
-                unaudited — quietly hiding the problems that cost companies hundreds of thousands
-                every year.
+                QA sampling is done on about 5% of calls. The remaining 95% goes unaudited,
+                quietly hiding the problems that cost companies hundreds of thousands every year.
               </p>
             </Reveal>
             <div className="mt-10 grid gap-4 sm:grid-cols-2">

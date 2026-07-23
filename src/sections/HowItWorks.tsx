@@ -1,4 +1,4 @@
-import { Plug, ScanSearch, Zap } from 'lucide-react'
+import { BadgeCheck, Plug, ScanSearch, Zap } from 'lucide-react'
 import { Eyebrow, Reveal } from '@/components/reveal'
 
 const STEPS = [
@@ -18,6 +18,13 @@ const STEPS = [
   },
   {
     n: '03',
+    icon: BadgeCheck,
+    title: 'Score',
+    body: 'Every call is scored consistently against your quality, compliance, and outcome criteria, with evidence linked to the transcript.',
+    mono: 'EVIDENCE-LINKED SCORES',
+  },
+  {
+    n: '04',
     icon: Zap,
     title: 'Act',
     body: 'Evidence-linked insights route straight to coaches, compliance, and revenue teams. Flags become fixes, signals become pipeline.',
@@ -31,7 +38,7 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
-            <Eyebrow>Connect · Analyze · Act</Eyebrow>
+            <Eyebrow>Connect · Analyze · Score · Act</Eyebrow>
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl">
@@ -47,9 +54,9 @@ export default function HowItWorks() {
           </Reveal>
         </div>
 
-        <div className="relative mt-16 grid gap-6 lg:grid-cols-3">
+        <div className="relative mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {/* connector line */}
-          <div className="pointer-events-none absolute left-0 right-0 top-[52px] hidden h-px bg-gradient-to-r from-transparent via-mint-500/30 to-transparent lg:block" />
+          <div className="pointer-events-none absolute left-0 right-0 top-[52px] hidden h-px bg-gradient-to-r from-transparent via-mint-500/30 to-transparent xl:block" />
           {STEPS.map((s, i) => (
             <Reveal key={s.n} delay={0.1 + i * 0.12}>
               <div className="group relative h-full overflow-hidden rounded-2xl card-line bg-ink-50/80 p-7 transition hover:border-mint-400/30">

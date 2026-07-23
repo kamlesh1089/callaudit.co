@@ -4,7 +4,7 @@ import { Eyebrow, Reveal } from '@/components/reveal'
 const ROWS = [
   {
     label: 'Coverage',
-    manual: '2–5% of calls sampled',
+    manual: 'About 5% QA sampled',
     audit: '100% of calls audited',
   },
   {
@@ -54,7 +54,8 @@ export default function Difference() {
         </div>
 
         <Reveal delay={0.2}>
-          <div className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-2xl card-line bg-ink-50/80">
+          <div className="mx-auto mt-14 max-w-4xl overflow-x-auto rounded-2xl card-line bg-ink-50/80">
+            <div className="min-w-[680px]">
             {/* header row */}
             <div className="grid grid-cols-[0.7fr_1fr_1fr] border-b border-white/[0.07] max-sm:grid-cols-[0.55fr_1fr_1fr]">
               <div className="px-5 py-4 max-sm:px-3" />
@@ -93,6 +94,7 @@ export default function Difference() {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </Reveal>
 

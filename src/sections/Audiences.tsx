@@ -17,7 +17,7 @@ const AUDIENCES = [
   {
     icon: ShieldCheck,
     title: 'QA & Compliance Teams',
-    body: 'Retire sampling forever. Every call checked against your scorecards, every violation flagged, every report audit-ready with transcript-linked proof.',
+    body: 'Move beyond the roughly 5% covered by QA sampling. Every call is checked against your scorecards, every violation flagged, and every report backed by transcript-linked proof.',
     tags: ['Custom scorecards', 'Compliance flags', 'Audit-ready reports'],
   },
   {
