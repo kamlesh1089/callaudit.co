@@ -19,9 +19,6 @@ export default function CTA() {
                   </h2>
                   <h3 className="mt-6 text-xl font-semibold text-white">Start with conversations you already have.</h3>
                   <p className="mt-4 max-w-md text-[16px] font-medium leading-7 text-slate-400">
-                    Share your details and we’ll help you plan a first transcript audit. No real-time integration is required to begin.
-                  </p>
-                  <p className="mt-4 max-w-md text-[16px] font-medium leading-7 text-slate-400">
                     Connect your call platform and watch AI agents score, tag, and evidence-link your first calls — in minutes, not months.
                   </p>
                 </div>

@@ -7,6 +7,8 @@ import Difference from '@/sections/Difference'
 import Metrics from '@/sections/Metrics'
 import Audiences from '@/sections/Audiences'
 import MarketFit from '@/sections/MarketFit'
+import Security from '@/sections/Security'
+import BulkUpload from '@/sections/BulkUpload'
 import CTA from '@/sections/CTA'
 import Footer from '@/sections/Footer'
 
@@ -23,6 +25,8 @@ export default function Home() {
         <Metrics />
         <Audiences />
         <MarketFit />
+        <Security />
+        <BulkUpload />
         <CTA />
       </main>
       <Footer />
