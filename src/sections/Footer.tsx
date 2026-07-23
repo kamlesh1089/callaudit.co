@@ -5,7 +5,7 @@ const COLS = [
   {
     title: 'Product',
     links: ['AI Intelligence', 'How It Works', 'Results', "Who It's For", 'Pricing'],
-    hrefs: ['/#intelligence', '/#solution', '/#results', '/#who', '/pricing'],
+    hrefs: ['/#intelligence', '/#solution', '/#results', '/#who', '/pricing/'],
   },
   {
     title: 'Teams',

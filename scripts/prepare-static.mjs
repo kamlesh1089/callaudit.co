@@ -10,8 +10,8 @@ const pricingGraph = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://callaudit.co/pricing#webpage',
-      url: 'https://callaudit.co/pricing',
+      '@id': 'https://callaudit.co/pricing/#webpage',
+      url: 'https://callaudit.co/pricing/',
       name: pricingTitle,
       description: pricingDescription,
       isPartOf: { '@id': 'https://callaudit.co/#website' },
@@ -30,7 +30,7 @@ const pricingGraph = {
           '@type': 'ListItem',
           position: 2,
           name: 'Pricing',
-          item: 'https://callaudit.co/pricing',
+          item: 'https://callaudit.co/pricing/',
         },
       ],
     },
@@ -40,7 +40,7 @@ const pricingGraph = {
       price: '0',
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
-      url: 'https://callaudit.co/pricing',
+      url: 'https://callaudit.co/pricing/',
       itemOffered: { '@id': 'https://callaudit.co/#software' },
     },
   ],
@@ -50,10 +50,10 @@ const pricingHtml = homeHtml
   .replaceAll('./assets/', '../assets/')
   .replace(/<title>[^<]*<\/title>/, `<title>${pricingTitle}</title>`)
   .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${pricingDescription}" />`)
-  .replace(/<link rel="canonical" href="[^"]*" \/>/, '<link rel="canonical" href="https://callaudit.co/pricing" />')
+  .replace(/<link rel="canonical" href="[^"]*" \/>/, '<link rel="canonical" href="https://callaudit.co/pricing/" />')
   .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${pricingTitle}" />`)
   .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${pricingDescription}" />`)
-  .replace(/<meta property="og:url" content="[^"]*" \/>/, '<meta property="og:url" content="https://callaudit.co/pricing" />')
+  .replace(/<meta property="og:url" content="[^"]*" \/>/, '<meta property="og:url" content="https://callaudit.co/pricing/" />')
   .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${pricingTitle}" />`)
   .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${pricingDescription}" />`)
   .replace(

@@ -4,7 +4,7 @@ import Nav from '@/sections/Nav'
 import Footer from '@/sections/Footer'
 import { LeadFormButton } from '@/components/lead-form'
 
-const canonicalUrl = 'https://callaudit.co/pricing'
+const canonicalUrl = 'https://callaudit.co/pricing/'
 
 export default function Pricing() {
   useEffect(() => {

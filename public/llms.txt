@@ -3,7 +3,7 @@
 > CallAudit.co is an AI-native call auditing platform that analyzes call transcripts for quality, compliance, outcomes, sentiment, coaching opportunities, churn risk, and revenue signals.
 
 Canonical website: https://callaudit.co/
-Pricing: https://callaudit.co/pricing
+Pricing: https://callaudit.co/pricing/
 Sitemap: https://callaudit.co/sitemap.xml
 Language: English
 
@@ -40,7 +40,7 @@ Language: English
 - Industries: https://callaudit.co/#industries
 - Use Cases: https://callaudit.co/#use-cases
 - Contact: https://callaudit.co/#contact
-- Pricing: https://callaudit.co/pricing
+- Pricing: https://callaudit.co/pricing/
 
 ## Contact
 
