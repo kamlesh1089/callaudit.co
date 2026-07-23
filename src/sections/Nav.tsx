@@ -6,9 +6,8 @@ const LINKS = [
   { label: 'Home', href: '/#top' },
   { label: 'Problem', href: '/#problem' },
   { label: 'Solution', href: '/#solution' },
-  { label: 'Intelligence', href: '/#intelligence' },
+  { label: 'AI Intelligence', href: '/#intelligence' },
   { label: 'Results', href: '/#results' },
-  { label: "Who It's For", href: '/#who' },
   { label: 'Industries', href: '/#industries' },
   { label: 'Use Cases', href: '/#use-cases' },
 ]
@@ -62,9 +61,6 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
-          <a href="/pricing" className="whitespace-nowrap text-[14px] font-medium text-[#A6B3C4] transition hover:text-white 2xl:text-[14.5px]">
-            Pricing
-          </a>
           <LeadFormButton className="whitespace-nowrap text-[14px] font-medium text-[#A6B3C4] transition hover:text-white 2xl:text-[14.5px]">
             Contact Us
           </LeadFormButton>
@@ -98,9 +94,6 @@ export default function Nav() {
                 {l.label}
               </a>
             ))}
-            <a href="/pricing" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white">
-              Pricing
-            </a>
             <LeadFormButton onOpen={() => setOpen(false)} className="rounded-lg px-3 py-2.5 text-left text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white">
               Contact Us
             </LeadFormButton>

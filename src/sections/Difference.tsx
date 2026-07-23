@@ -32,7 +32,7 @@ const ROWS = [
 export default function Difference() {
   return (
     <section className="relative border-y border-white/[0.05] bg-ink-50/40">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <Eyebrow>The Difference</Eyebrow>

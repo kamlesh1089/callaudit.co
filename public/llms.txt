@@ -15,7 +15,7 @@
 - Home: https://callaudit.co/#top
 - Problem: https://callaudit.co/#problem
 - Solution: https://callaudit.co/#solution
-- Intelligence: https://callaudit.co/#intelligence
+- AI Intelligence: https://callaudit.co/#intelligence
 - Results: https://callaudit.co/#results
 - Who It Is For: https://callaudit.co/#who
 - Industries: https://callaudit.co/#industries
@@ -28,3 +28,14 @@
 - Website: https://callaudit.co/
 - Email: hello@callaudit.co
 - Contact and WhatsApp: +91 9004271098
+
+## Industries
+
+- BPOs and contact centers
+- Financial services
+- Insurance
+- Healthcare services
+- Ecommerce and retail
+- IT and B2B SaaS
+- Real estate
+- Travel and hospitality

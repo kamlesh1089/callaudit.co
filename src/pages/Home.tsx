@@ -9,7 +9,6 @@ import Audiences from '@/sections/Audiences'
 import MarketFit from '@/sections/MarketFit'
 import CTA from '@/sections/CTA'
 import Footer from '@/sections/Footer'
-import { LeadFormModal } from '@/components/lead-form'
 
 export default function Home() {
   return (
@@ -27,7 +26,6 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
-      <LeadFormModal />
     </div>
   )
 }

@@ -31,7 +31,7 @@ const AUDIENCES = [
 export default function Audiences() {
   return (
     <section id="who" className="relative scroll-mt-24 border-t border-white/[0.05]">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
         <div className="max-w-2xl">
           <Reveal>
             <Eyebrow>Who It's For</Eyebrow>

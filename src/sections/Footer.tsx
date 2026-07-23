@@ -4,8 +4,8 @@ import { LeadFormButton } from '@/components/lead-form'
 const COLS = [
   {
     title: 'Product',
-    links: ['Intelligence Layers', 'How It Works', 'Results', 'Pricing'],
-    hrefs: ['/#intelligence', '/#solution', '/#results', '/pricing'],
+    links: ['AI Intelligence', 'How It Works', 'Results', "Who It's For", 'Pricing'],
+    hrefs: ['/#intelligence', '/#solution', '/#results', '/#who', '/pricing'],
   },
   {
     title: 'Teams',

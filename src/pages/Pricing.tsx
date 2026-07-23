@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { ArrowRight, BadgeCheck, MessagesSquare } from 'lucide-react'
 import Nav from '@/sections/Nav'
 import Footer from '@/sections/Footer'
-import { LeadFormButton, LeadFormModal } from '@/components/lead-form'
+import { LeadFormButton } from '@/components/lead-form'
 
 const canonicalUrl = 'https://callaudit.co/pricing'
 
@@ -57,7 +57,6 @@ export default function Pricing() {
         </div>
       </main>
       <Footer />
-      <LeadFormModal />
     </div>
   )
 }

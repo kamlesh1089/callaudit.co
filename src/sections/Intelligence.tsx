@@ -190,16 +190,16 @@ export default function Intelligence() {
   return (
     <section id="intelligence" className="relative scroll-mt-24 overflow-hidden">
       <div className="pointer-events-none absolute left-[-240px] top-1/4 h-[480px] w-[480px] rounded-full bg-mint-500/[0.06] blur-[130px]" />
-      <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+      <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
         <div className="max-w-2xl">
           <Reveal>
-            <Eyebrow>Three Intelligence Layers</Eyebrow>
+            <Eyebrow>One Audit · Three Layers of AI Intelligence</Eyebrow>
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-6 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl">
               One audit.{' '}
               <span className="font-serif font-normal italic text-gradient">
-                Three layers of intelligence.
+                Three layers of AI intelligence.
               </span>
             </h2>
           </Reveal>

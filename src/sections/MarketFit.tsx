@@ -5,6 +5,9 @@ import {
   HeartPulse,
   Headphones,
   Landmark,
+  MonitorCog,
+  Plane,
+  ShoppingBag,
   ShieldCheck,
   TrendingUp,
 } from 'lucide-react'
@@ -30,6 +33,26 @@ const INDUSTRIES = [
     icon: HeartPulse,
     title: 'Healthcare Services',
     body: 'Surface service gaps, escalation signals, and process adherence while maintaining audit-ready evidence.',
+  },
+  {
+    icon: ShoppingBag,
+    title: 'Ecommerce & Retail',
+    body: 'Analyze customer service, order, refund, retention, and escalation conversations across every channel and team.',
+  },
+  {
+    icon: MonitorCog,
+    title: 'IT & B2B SaaS',
+    body: 'Improve discovery, demos, onboarding, renewals, support quality, and expansion signals across the customer lifecycle.',
+  },
+  {
+    icon: Building2,
+    title: 'Real Estate',
+    body: 'Audit enquiry handling, qualification, follow-ups, site-visit conversion, and customer commitments at scale.',
+  },
+  {
+    icon: Plane,
+    title: 'Travel & Hospitality',
+    body: 'Monitor booking, service recovery, upsell, guest experience, and compliance conversations across locations.',
   },
 ]
 
@@ -82,14 +105,14 @@ export default function MarketFit() {
   return (
     <>
       <section id="industries" className="relative scroll-mt-24 border-t border-white/[0.05]">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
           <div className="max-w-2xl">
             <Reveal>
               <Eyebrow>Industries</Eyebrow>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-5 font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Built for high-volume, high-stakes conversations.
+                Built for high-stakes conversations.
               </h2>
             </Reveal>
           </div>
@@ -101,7 +124,7 @@ export default function MarketFit() {
         id="use-cases"
         className="relative scroll-mt-24 border-y border-white/[0.05] bg-ink-50/40"
       >
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
           <div className="max-w-2xl">
             <Reveal>
               <Eyebrow>Use Cases</Eyebrow>

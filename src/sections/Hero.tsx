@@ -152,7 +152,7 @@ export default function Hero() {
             </motion.h1>
             <motion.p
               {...fade(0.2)}
-              className="mt-6 max-w-[650px] text-[16px] font-normal leading-[1.75] text-[#A6B3C4] sm:mt-8 sm:text-[18px]"
+              className="mt-6 max-w-[650px] text-[16px] font-medium leading-[1.75] text-[#A6B3C4] sm:mt-8 sm:text-[18px]"
             >
               CallAudit deploys AI agents that analyze{' '}
               <span className="font-semibold text-white">100% of your call transcripts</span> —
