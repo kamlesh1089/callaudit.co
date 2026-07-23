@@ -115,14 +115,14 @@ export default function Problem() {
   return (
     <section id="problem" className="relative scroll-mt-24">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
-        <div className="grid items-start gap-10 lg:grid-cols-2">
-          <div>
+        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+          <div className="min-w-0">
             <Reveal>
               <Eyebrow>The 95% Visibility Gap</Eyebrow>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="mt-6 font-display font-semibold leading-[1.08] tracking-tight text-white">
-                <span className="block whitespace-nowrap text-[clamp(1.35rem,6vw,3rem)]">
+                <span className="block whitespace-nowrap text-[clamp(1.35rem,6vw,3rem)] lg:text-[clamp(1.9rem,3vw,2.75rem)]">
                   QA sampling covers about 5%.
                 </span>
                 <span className="mt-2 block font-serif text-[clamp(1.75rem,7vw,3rem)] font-normal italic text-slate-400">
