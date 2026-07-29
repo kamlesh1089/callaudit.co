@@ -6,7 +6,8 @@ export function LeadFormButton({ children, className, onOpen }: { children: Reac
 }
 
 export function EmbeddedLeadForm() {
-  const submitted = new URLSearchParams(window.location.search).get('submitted') === 'true'
+  const submitted = typeof window !== 'undefined'
+    && new URLSearchParams(window.location.search).get('submitted') === 'true'
 
   if (submitted) {
     return (
@@ -30,7 +31,7 @@ export function EmbeddedLeadForm() {
       <input type="hidden" name="_subject" value="New CallAudit.co enquiry" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value={`${window.location.origin}/?submitted=true#contact`} />
+      <input type="hidden" name="_next" value="https://callaudit.co/?submitted=true#contact" />
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mint-400">Request a free audit</p>
       <h3 className="mt-3 font-display text-3xl font-semibold text-white">See what your calls reveal.</h3>
       <p className="mt-3 text-sm font-medium leading-6 text-slate-400">Share your details and we’ll help you get started with conversations you already have.</p>
