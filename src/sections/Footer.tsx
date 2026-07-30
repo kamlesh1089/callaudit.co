@@ -1,5 +1,6 @@
 import { Logo } from './Nav'
 import { LeadFormButton } from '@/components/lead-form'
+import { CookiePreferencesButton } from '@/components/cookie-consent'
 
 const COLS = [
   {
@@ -63,9 +64,12 @@ export default function Footer() {
           <p className="text-[12.5px] text-slate-600">
             © 2026 CallAudit.co — AI-Native Call Auditing
           </p>
-          <p className="font-mono text-[11px] text-slate-600">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:justify-end">
+            <CookiePreferencesButton className="text-[12.5px] text-slate-500 transition hover:text-mint-300" />
+            <p className="font-mono text-[11px] text-slate-600">
             100% of calls audited · &lt;60s per audit
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
